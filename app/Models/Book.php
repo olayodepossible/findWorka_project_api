@@ -10,7 +10,10 @@ class Book extends Model
     use HasFactory;
 
     protected $fillable = [
-      'name'
+      'name',
+      'authors',
+      'comments_count',
+      'characters'
     ];
 
     public function books(){
