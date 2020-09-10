@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Book;
+use App\Models\BookModel;
+use App\Models\Comment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 
 class BookControllerApi extends Controller
@@ -12,38 +14,32 @@ class BookControllerApi extends Controller
     public function getAllBooks() {
 
         $books = Http::get("https://www.anapioficeandfire.com/api/books")->json();
-        $data = [];
+
        foreach ($books as $book){
-           $myBook = new Book;
-           $myBook->name = $book['name'];
-           $myBook->authors = $book['authors'];
-           $myBook->comments_count = 12;
-           $myBook->characters = $book['characters'];
-           $date = Carbon::parse($book['released'])->format("Y-m-d");
-           $data[$date] = $myBook;
+           if (DB::table('book_models')->where('isbn', $book['isbn'])->doesntExist()) {
+               $myBook = new BookModel;
+               $myBook->name = $book['name'];
+               $myBook->isbn = $book['isbn'];
+               $myBook->authors = $book['authors'];
+               $myBook->dateReleased = Carbon::parse($book['released'])->format("Y-m-d");
+               $myBook->comments_count = DB::table('comments')->where('book_isbn', $book['isbn'])->count();
+               $myBook->characters = $book['characters'];
+               $myBook->save();
+           }
+
        }
-       return $data;
+       return  $bookData = DB::table('book_models')->paginate(5);
     }
+
 
     public function getBook($id) {
-        $book = Http::get("https://www.anapioficeandfire.com/api/books/{$id}")->json();
-        $myBook = new Book;
-        $myBook->name = $book['name'];
-        $myBook->authors = $book['authors'];
-        $myBook->comments_count = 12;
-        $myBook->characters = $book['characters'];
-        return $myBook;
+        if (DB::table('book_models')->where('id', $id)->exists()) {
+            return json_decode(collect(DB::table('book_models')->where('id', $id)->first())->toJson() , true);
+        } else {
+            return response()->json([
+                "message" => "Book not found"
+            ], 404);
+        }
     }
 
-    public function createBook(Request $request) {
-        // logic to create a book record goes here
-    }
-
-    public function updateBook(Request $request, $id) {
-        // logic to update a book record goes here
-    }
-
-    public function deleteBook ($id) {
-        // logic to delete a book record goes here
-    }
 }

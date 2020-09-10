@@ -9,10 +9,8 @@ class Comment extends Model
 {
     protected $table = 'comments';
     use HasFactory;
-    protected $fillable = [
-        'comment',
-        'book_id'
-    ];
+    protected $fillable = ['comment', 'book_id'];
+
 
     public function comments(){
         return $this->belongsTo(Book::class);

@@ -20,9 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d34e938-fc66-4e25-80df-f8f0c3edf03f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/findWorka_project_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/findWorka_project_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BooksController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Book.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_09_220109_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_09_220109_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +181,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599686573471</updated>
       <workItem from="1599686576571" duration="8124000" />
-      <workItem from="1599728666733" duration="11078000" />
+      <workItem from="1599728666733" duration="34748000" />
     </task>
     <servers />
   </component>
@@ -216,5 +221,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="670" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599695862690" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1599770400408">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1599770400408" />
   </component>
 </project>

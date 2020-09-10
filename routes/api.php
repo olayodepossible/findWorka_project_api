@@ -23,3 +23,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('root', [BooksController::class, 'show']);
 Route::get('books', [BookControllerApi::class, 'getAllBooks']);
 Route::get('books/{id}', [BookControllerApi::class, 'getBook']);
+Route::get('chars', [BookControllerApi::class, 'getCharacters']);
+Route::get('chars/{id}', [BookControllerApi::class, 'getCharacter']);
