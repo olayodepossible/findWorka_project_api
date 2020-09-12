@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\BookControllerApi;
-use App\Http\Controllers\BooksController;
+use App\Http\Controllers\CharacterController;
+use App\Http\Controllers\CommentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,8 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('root', [BooksController::class, 'show']);
 Route::get('books', [BookControllerApi::class, 'getAllBooks']);
 Route::get('books/{id}', [BookControllerApi::class, 'getBook']);
-Route::get('chars', [BookControllerApi::class, 'getCharacters']);
-Route::get('chars/{id}', [BookControllerApi::class, 'getCharacter']);
+
+Route::get('chars/', [CharacterController::class, 'showCharacters']);
+Route::get('comment/{id}', [CommentController::class, 'getComment']);

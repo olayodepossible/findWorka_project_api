@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d34e938-fc66-4e25-80df-f8f0c3edf03f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CharacterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/findWorka_project_api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/findWorka_project_api.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookControllerApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookControllerApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Book.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_09_220109_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_09_220109_create_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,7 +180,10 @@
       <option name="presentableId" value="Default" />
       <updated>1599686573471</updated>
       <workItem from="1599686576571" duration="8124000" />
-      <workItem from="1599728666733" duration="34748000" />
+      <workItem from="1599728666733" duration="35422000" />
+      <workItem from="1599838708507" duration="3528000" />
+      <workItem from="1599863051513" duration="16000" />
+      <workItem from="1599898278363" duration="19732000" />
     </task>
     <servers />
   </component>

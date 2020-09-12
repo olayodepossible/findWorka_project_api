@@ -33,13 +33,13 @@ class BookControllerApi extends Controller
 
 
     public function getBook($id) {
-        if (DB::table('book_models')->where('id', $id)->exists()) {
-            return json_decode(collect(DB::table('book_models')->where('id', $id)->first())->toJson() , true);
-        } else {
-            return response()->json([
-                "message" => "Book not found"
-            ], 404);
-        }
+        $data = json_decode(collect(DB::table('book_models')
+            ->where('id', $id)->get())->toJson() , true);
+
+        return response()->json([
+            "status" => 200,
+            "book" => $data
+        ]);
     }
 
 }
