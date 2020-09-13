@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BookModel;
-use App\Models\Comment;
+/*use App\Models\Comment;*/
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
