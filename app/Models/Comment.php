@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
-    protected $table = 'comments';
     use HasFactory;
     protected $fillable = ['comment', 'book_isbn'];
 
 
-    public function comments(){
-        return $this->belongsTo(Book::class);
+    public function book(){
+        return $this->belongsTo(BookModel::class, 'isbn');
+
     }
 }

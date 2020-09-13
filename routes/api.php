@@ -25,4 +25,5 @@ Route::get('books', [BookControllerApi::class, 'getAllBooks']);
 Route::get('books/{id}', [BookControllerApi::class, 'getBook']);
 
 Route::get('chars/', [CharacterController::class, 'showCharacters']);
-Route::get('comment/{id}', [CommentController::class, 'getComment']);
+Route::get('comments/{id}', [CommentController::class, 'getComments']);
+Route::post('comment', [CommentController::class, 'createComment']);

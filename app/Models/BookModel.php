@@ -19,7 +19,8 @@ class BookModel extends Model
 
     protected $casts =['characters' => 'array', 'authors' => 'array'];
 
-    public function books(){
+    public function comments(){
+
         return $this->hasMany(Comment::class);
     }
 }
