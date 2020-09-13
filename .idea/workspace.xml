@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d34e938-fc66-4e25-80df-f8f0c3edf03f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="7d34e938-fc66-4e25-80df-f8f0c3edf03f" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +178,7 @@
       <workItem from="1599898278363" duration="35311000" />
       <workItem from="1599955310318" duration="3284000" />
       <workItem from="1599959156041" duration="342000" />
-      <workItem from="1600016246163" duration="2635000" />
+      <workItem from="1600016246163" duration="3100000" />
     </task>
     <servers />
   </component>
