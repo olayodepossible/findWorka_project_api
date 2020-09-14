@@ -15,7 +15,7 @@ class BookControllerApi extends Controller
 
         $books = Http::get("https://www.anapioficeandfire.com/api/books")->json();
 
-       foreach ($books as $book){
+       /*foreach ($books as $book){
            if (DB::table('book_models')->where('isbn', $book['isbn'])->doesntExist()) {
                $myBook = new BookModel;
                $myBook->name = $book['name'];
@@ -25,7 +25,7 @@ class BookControllerApi extends Controller
                $myBook->comments_count = DB::table('comments')->where('book_isbn', $book['isbn'])->count();
                $myBook->characters = $book['characters'];
                $myBook->save();
-           }
+           */}
 
        }
        return  $bookData = DB::table('book_models')->paginate(5);
