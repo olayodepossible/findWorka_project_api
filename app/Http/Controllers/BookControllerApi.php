@@ -16,14 +16,16 @@ class BookControllerApi extends Controller
         $books = Http::get("https://www.anapioficeandfire.com/api/books")->json();
 
        foreach ($books as $book){
-           $book = BookModel::firstOrCreate(['isbn', $book['isbn']], [
-            'name' => $book['name'],
-           'isbn' => $book['isbn'],
-           'authors' => $book['authors'],
-           'dateReleased' => Carbon::parse($book['released'])->format("Y-m-d"),
-           'comments_count' => DB::table('comments')->where('book_isbn', $book['isbn'])->count(),
-           'characters' => $book['characters'],
-           ]);
+           if (DB::table('book_models')->where('isbn', $book['isbn'])->doesntExist()) {
+               $myBook = new BookModel;
+               $myBook->name = $book['name'];
+               $myBook->isbn = $book['isbn'];
+               $myBook->authors = $book['authors'];
+               $myBook->dateReleased = Carbon::parse($book['released'])->format("Y-m-d");
+               $myBook->comments_count = DB::table('comments')->where('book_isbn', $book['isbn'])->count();
+               $myBook->characters = $book['characters'];
+               $myBook->save();
+           }
 
        }
        return  $bookData = DB::table('book_models')->paginate(5);
